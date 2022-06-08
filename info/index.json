@@ -1,0 +1,26 @@
+{
+  "arch": "x86_64", 
+  "build": "py27_0", 
+  "build_number": 0, 
+  "depends": [
+    "affine", 
+    "appdirs", 
+    "mapkit", 
+    "pangaea", 
+    "psycopg2", 
+    "pynio", 
+    "python", 
+    "pyyaml", 
+    "rapidpy", 
+    "timezonefinder", 
+    "utm", 
+    "wrf-python"
+  ], 
+  "license": "BSD-3-Clause", 
+  "license_family": "BSD", 
+  "name": "gsshapy", 
+  "platform": "linux", 
+  "subdir": "linux-64", 
+  "timestamp": 1578670133431, 
+  "version": "2.3.5"
+}

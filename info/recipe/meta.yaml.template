@@ -1,0 +1,85 @@
+# This file created by conda-build 3.18.8
+# meta.yaml template originally from:
+# /home/mike.shaw/anaconda2/pkgs/gsshapy-2.3.5-py27_0/info/recipe, last modified Thu Jan  9 13:31:25 2020
+# ------------------------------------------------
+
+package:
+    name: gsshapy
+    version: 2.3.5
+source:
+    fn: gsshapy-2.3.5.tar.gz
+    sha256: b25287e1a406cbacd36e2bb9c08573901798a3a62afa77424b3c4067d90ec226
+    url: https://pypi.io/packages/source/g/gsshapy/gsshapy-2.3.5.tar.gz
+build:
+    number: '0'
+    script: python setup.py install --single-version-externally-managed --record record.txt
+    string: py27_0
+requirements:
+    build:
+        - ca-certificates 2017.4.17 0
+        - certifi 2017.4.17 py27_0
+        - ncurses 5.9 10
+        - openssl 1.0.2l 0
+        - python 2.7.13 1
+        - readline 6.2 0
+        - setuptools 33.1.1 py27_0
+        - sqlite 3.13.0 1
+        - tk 8.5.19 1
+        - zlib 1.2.11 0
+    run:
+        - affine
+        - appdirs
+        - mapkit
+        - pangaea
+        - psycopg2
+        - pynio
+        - python
+        - pyyaml
+        - rapidpy
+        - timezonefinder
+        - utm
+        - wrf-python
+test:
+    imports:
+        - gsshapy
+        - gsshapy.grid
+        - gsshapy.grid.era_to_gssha
+        - gsshapy.grid.grid_to_gssha
+        - gsshapy.grid.hrrr_to_gssha
+        - gsshapy.grid.nwm_to_gssha
+        - gsshapy.lib
+        - gsshapy.lib.db_tools
+        - gsshapy.modeling
+        - gsshapy.modeling.event
+        - gsshapy.modeling.framework
+        - gsshapy.modeling.model
+        - gsshapy.orm
+        - gsshapy.orm.file_io
+        - gsshapy.orm.prj
+about:
+    description: 'GsshaPy is an object relational model (ORM) for the
+
+        Gridded Surface Subsurface Hydrologic Analysis (GSSHA) model
+
+        and a toolkit to convert gridded input into GSSHA input.
+
+        The purpose of GsshaPy is to expose GSSHA files to a web
+
+        development environment by reading them into an SQL database.
+
+        The files can also be written back to file for model execution.
+
+        '
+    dev_url: https://github.com/ci-water/gsshapy
+    doc_url: http://gsshapy.readthedocs.io
+    home: http://github.com/ci-water/gsshapy
+    license: BSD-3-Clause
+    license_family: BSD
+    license_file: LICENSE.txt
+    summary: Object Relational Model for GSSHA model files and a toolkit to convert
+        gridded input into GSSHA input.
+extra:
+    final: true
+    recipe-maintainers:
+        - snowman2
+        - swainn
